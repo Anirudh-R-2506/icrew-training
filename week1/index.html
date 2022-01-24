@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <script src="/static/js/particles.min.js"></script>
+    <style>
+        .menu {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 40%;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+        }
+        .menu button {
+            font-family: 'Roboto', sans-serif;            
+            font-size: 3rem;
+            padding: 20px;
+            min-width: 100%;    
+            border-radius: 20px;
+            border: 1px solid grey;    
+            color: grey;
+            display: block;
+            margin: 0 auto;
+            background: #fff;
+            transition: all 0.3s ease-in-out;
+        }
+        .menu button:hover {
+            background: purple;
+            border: 1px solid transparent;
+            color: #fff;
+        }
+    </style>
+    <style>
+        #particles-js canvas {
+            display: block;
+            transform: scale(1);
+            opacity: 1;
+            transition: opacity .8s ease, transform 1.4s ease
+        }
+
+        #particles-js {
+            width: 100%;
+            height: 100%;
+            position: fixed;
+            z-index: -10;
+            top: 0;
+            left: 0
+        }
+    </style>
+</head>
+<body>
+    <div id="particles-js"></div>
+    <div class="menu">
+        <button onclick="window.open('/login','_blank')">Login</button><br>
+        <button onclick="window.open('/profile','_blank')">Profile</button><br>
+        <button onclick="window.open('/register','_blank')">Register</button><br>
+    </div>
+    <script>
+        particlesJS.load('particles-js', '/static/js/particlesjs-config.json', function() {
+        console.log('callback - particles.js config loaded');
+        });   
+    </script>
+</body>
+</html>
