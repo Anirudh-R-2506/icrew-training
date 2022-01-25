@@ -3,7 +3,9 @@
 a {
   text-decoration: none;
 }
-
+.mt10 {
+    margin-top: -10px;
+}
 .login-form, .profile{
     width: 90%;
     display: block;
