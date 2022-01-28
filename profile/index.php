@@ -13,14 +13,18 @@ if (logged_in($link)){
     $result = $link->query("SELECT * FROM users WHERE id = '".$_SESSION['user_id']."'");
     $row = $result->fetch_assoc();
     $name = $row['name'];
-    $u_name = $row['username'];
+    $u_name = $row['email'];
     $bio = $row['bio'];
 }
 else{?>
     <script>
-        window.location.href = "/login";
+        window.location.href = "/";
     </script>
 <?php
+}
+if (isset($_POST['out'])){
+    session_unset();
+    echo "<script>window.location.href = '/';</script>";
 }
 ?>
 <!DOCTYPE html>
@@ -46,7 +50,7 @@ else{?>
                     <img src="https://i.pinimg.com/236x/d9/d7/22/d9d722f1edfada6cb505b93bbdaca9dd--correct-psychology.jpg" alt="">
                     <div class="profile-header">
                         <h1 class="anim" data-type="fadeInUp" data-delay="0.2s"><?php echo $name;?></h1>                        
-                        <p class="anim profile-details" data-type="fadeInUp" data-delay="0.25s">@<?php echo $u_name;?></p>
+                        <p class="anim profile-details" data-type="fadeInUp" data-delay="0.25s"><?php echo $u_name;?></p>
                     </div>
                     <div class="profile-details">
                         <div class="interactions">
@@ -57,6 +61,10 @@ else{?>
                         </div>
                     </div>
                     <button class="anim" data-type="fadeInDown" data-delay="0.55s">Update Profile</button>
+                    <br>
+                    <form action="" method="post">
+                        <button name="out" type="submit" class="anim" data-type="fadeInDown" data-delay="0.6s">Log Out</button>
+                    </form>
                 </div>
             </div>
         </div>

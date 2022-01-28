@@ -3,9 +3,7 @@
 a {
   text-decoration: none;
 }
-.mt10 {
-    margin-top: -10px;
-}
+
 .login-form, .profile{
     width: 90%;
     display: block;
@@ -50,7 +48,39 @@ a {
     font-size: 1rem;
     color: #000;
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 20px;
+}
+#switch-btn-1, #switch-btn-2{
+    width: 100%;
+    font-family: 'Roboto', sans-serif;
+    padding: 20px;
+    min-width: 40%;    
+    border-radius: 20px;
+    border: 1px solid grey;    
+    color: grey;
+    display: block;
+    margin-right: 0;
+    margin-left: auto;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    background: #fff;
+    transition: all 0.3s ease-in-out;
+}
+#switch-btn-1:hover, #switch-btn-2:hover {
+    background: purple;
+    border: 1px solid transparent;
+    color: #fff;
+}
+.active {
+    display: block;
+}
+.hide {
+    display: none;
+}
+.active-page {
+    background: purple !important;
+    border: 1px solid transparent !important;
+    color: #fff !important;
 }
 .profile-details {
     color: grey;
@@ -106,7 +136,7 @@ a {
 .form-l .terms-privacy {
     display: flex;    
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     height: 30px;
 }
 .form-l .terms-privacy label {
@@ -127,7 +157,7 @@ a {
 .profile .profile-details .interactions {
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     height: 30px;
 }
 .profile .profile-details .interactions span {
@@ -137,7 +167,7 @@ a {
     font-family: 'Roboto', sans-serif;
     font-size: 1rem;
     text-align: left;
-    margin-bottom: 50px;
+    margin-bottom: 30px;
 }
 .profile button {
     font-family: 'Roboto', sans-serif;
