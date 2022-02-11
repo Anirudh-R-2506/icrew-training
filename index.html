@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Coming Soon</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="stylesheet" href="/static/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/css/anim.css">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="/static/js/bootstrap.min.js"></script>
+</head>
+<body>    
+    <div class="container">
+        <div class="row" style="height: 100vh;">
+            <div class="col-md-6">
+                <div class="text-wrap vertical-center">
+                    <p>Coming Soon</p>
+                    <h1>Buckle Up.<br>We are working on an awesome website.</h1>
+                    <div class="timer-wrap">
+                        <div id="timer"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 logo-wrap">
+                <img src="/static/img/logo.png" class="logo vertical-center" alt="">
+            </div>
+        </div>
+    </div>
+    <div class="links-wrap">
+        <a href="#" target="_blank" class="fa fa-facebook"></a>
+        <a href="#" target="_blank" class="fa fa-twitter"></a>
+        <a href="#" target="_blank" class="fa fa-instagram"></a>
+    </div>
+    <script>
+        function updateTimer(date) {
+            future = Date.parse(date);
+            now = new Date();
+            diff = future - now;
+
+            days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            hours = Math.floor(diff / (1000 * 60 * 60));
+            mins = Math.floor(diff / (1000 * 60));
+            secs = Math.floor(diff / 1000);
+
+            d = days;
+            h = hours - days * 24;
+            m = mins - hours * 60;
+            s = secs - mins * 60;
+
+            document.getElementById("timer")
+                .innerHTML =
+                '<div>' + d + '<span>Days</span></div>' +
+                '<div>' + h + '<span>Hours</span></div>' +
+                '<div>' + m + '<span>Minutes</span></div>' +
+                '<div>' + s + '<span>Seconds</span></div>';
+        }
+        updateTimer("jun 25, 2022 11:30:00");
+        setInterval('updateTimer("jun 25, 2022 11:30:00")', 1000);
+    </script>
+</body>
+</html>
