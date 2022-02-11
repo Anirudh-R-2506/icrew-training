@@ -60,7 +60,7 @@
 }
 #timer div span {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    color: #aaa;
+    color: DimGray;
     display: block;
     font-size: .35em;
     font-weight: 200;
@@ -75,7 +75,7 @@
     font-size: 1.3em;
     line-height: 1.5;
     margin-bottom: 20px;
-    color: #aaa;
+    color: DimGray;
     font-weight: 200;
     animation: fromTop .7s ease-in-out forwards;
 }
@@ -116,7 +116,7 @@
     animation: fromBottom .7s ease-in-out forwards;
 }
 .links-wrap .fa:hover {
-    color: #aaa;
+    color: DimGray;
 }
 .links-wrap .fa-facebook {
     color: #3b5998;
